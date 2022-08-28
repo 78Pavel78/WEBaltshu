@@ -1,73 +1,88 @@
-@font-face {
-    font-family: "Source Sans Pro";
-    src: url("../assets/fonts/SourceSansPro.woff2") format("woff2");
-  }
+* 
   
-  body {
-    /* BEGIN (write your solution here) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      /* END */
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-  
-    font-family: "Source Sans Pro", sans-serif;
-  
-    background-color: #8ec5fc;
-    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-  }
-  
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .weather {
-    /* BEGIN (write your solution here) */
-    display: flex;
-    justify-content: space-between;
-    /* END */
-    width: 355px;
-    height: 125px;
-    padding: 25px;
-  
-    background: #fff;
-    border-radius: 10px;
-  }
-  
-  .weather-info {
-    /* BEGIN (write your solution here) */
-    display: flex;
-    flex-wrap: wrap; 
-    /* END */
-  }
-  
-  .weather-info * {
-    margin: 0;
-  }
-  
-  .weather-value {
-    /* BEGIN (write your solution here) */
-     display: flex;
-    /* END */
-  
-    font-size: 4rem;
-  }
-  
-  .weather-value img {
-    height: 1.3em;
-    margin-right: 0.3em;
-  }
-  
-  .weather-img {
-    /* BEGIN (write your solution here) */
-  width:300px;
-    /* END */
-  }
-  
+.gallery {
   /* BEGIN (write your solution here) */
-  
+
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+ 
   /* END */
+
+  box-sizing: border-box;
+  width: 60%;
+  height: 700px;
+
+  padding: 20px 30px;
+
+  background: #f9f9f9;
+}
+
+.gallery-item {
+  box-sizing: border-box;
+  width: 32%;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  box-shadow:
+    0 2px 2px rgb(0 90 250 / 5%),
+    0 4px 4px rgb(0 90 250 / 5%),
+    0 8px 8px rgb(0 90 250 / 5%),
+    0 16px 16px rgb(0 90 250 / 5%);
+}
+
+/* BEGIN (write your solution here) */
+
+.gallery-item:nth-child(3n+1) { order: 1; }
+.gallery-item:nth-child(3n+2) { order: 2; }
+.gallery-item:nth-child(3n)   { order: 3; }
+
+/* Новые колонки разделители */
+.gallery::before,
+.gallery::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+/* END */
+
+.gallery-blue .gallery-item {
+  background: #90caf9;
+}
+
+.height-120 {
+  height: 120px;
+}
+
+.height-140 {
+  height: 140px;
+}
+
+.height-150 {
+  height: 150px;
+}
+
+.height-160 {
+  height: 160px;
+}
+
+.height-170 {
+  height: 170px;
+}
+
+.height-180 {
+  height: 180px;
+}
+
+.height-190 {
+  height: 190px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+ 
+  
   
